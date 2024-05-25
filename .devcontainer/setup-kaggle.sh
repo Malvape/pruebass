@@ -13,3 +13,10 @@ EOF
 
 # Set permissions
 chmod 600 /home/vscode/.kaggle/kaggle.json
+mkdir -p /home/vscode/datasets
+
+# Download the dataset
+kaggle datasets download -d arjunbhasin2013/ccdata -p /home/vscode/datasets
+
+# Unzip the dataset
+unzip /home/vscode/datasets/ccdata.zip -d /home/vscode/datasets
